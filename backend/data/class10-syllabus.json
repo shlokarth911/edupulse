@@ -1,0 +1,213 @@
+[
+  {
+    "name": "Mathematics",
+    "chapters": [
+      {
+        "title": "Real Numbers",
+        "topics": [
+          "Euclid’s division lemma",
+          "Fundamental theorem of arithmetic",
+          "Decimal representations of rational numbers",
+          "Operations on real numbers"
+        ]
+      },
+      {
+        "title": "Polynomials",
+        "topics": [
+          "Zeros of a polynomial",
+          "Relationship between zeros and coefficients",
+          "Remainder theorem",
+          "Factor theorem"
+        ]
+      },
+      {
+        "title": "Pair of Linear Equations in Two Variables",
+        "topics": [
+          "Graphical method of solution",
+          "Algebraic method of solution",
+          "Consistency and inconsistency of equations",
+          "Dependent and independent variables"
+        ]
+      },
+      {
+        "title": "Quadratic Equations",
+        "topics": [
+          "Quadratic equations in one variable",
+          "Formulae for roots of a quadratic equation",
+          "Graphical representation of quadratic equations"
+        ]
+      },
+      {
+        "title": "Arithmetic Progressions",
+        "topics": [
+          "Arithmetic mean",
+          "Relationship between three consecutive terms",
+          "General form of an arithmetic progression"
+        ]
+      },
+      {
+        "title": "Triangles",
+        "topics": [
+          "Similarity of triangles",
+          "Criteria for similarity",
+          "Basic proportionality theorem",
+          "Area of similar triangles"
+        ]
+      },
+      {
+        "title": "Circles",
+        "topics": [
+          "Properties of chords",
+          "Arcs and subtended angles",
+          "Intercepted arcs",
+          "Circles touching each other"
+        ]
+      },
+      {
+        "title": "Constructions",
+        "topics": [
+          "Division of a line segment in a given ratio",
+          "Construction of a triangle similar to a given triangle",
+          "Construction of a triangle with given sides"
+        ]
+      },
+      {
+        "title": "Areas related to circles",
+        "topics": [
+          "Area of a circle",
+          "Area of a sector of a circle",
+          "Area of a segment of a circle"
+        ]
+      },
+      {
+        "title": "Surface Areas and Volumes",
+        "topics": [
+          "Surface areas of a cube, cuboid and cylinder",
+          "Volumes of a cube, cuboid and cylinder"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Science",
+    "chapters": [
+      {
+        "title": "Chemical Reactions and Equations",
+        "topics": [
+          "Types of chemical reactions",
+          "Redox reactions",
+          "Oxidation number",
+          "Balancing chemical equations"
+        ]
+      },
+      {
+        "title": "Acids, Bases and Salts",
+        "topics": [
+          "Arrhenius, Bronsted-Lowry and Lewis definitions",
+          "pH scale",
+          "Strong and weak acids and bases",
+          "Importance of pH in everyday life"
+        ]
+      },
+      {
+        "title": "Metals and Non-metals",
+        "topics": [
+          "Physical properties of metals",
+          "Chemical properties of metals",
+          "Occurrence and extraction of metals",
+          "Properties of non-metals"
+        ]
+      },
+      {
+        "title": "Carbon and its Compounds",
+        "topics": [
+          "Occurrence and importance of carbon",
+          "Allotropes of carbon",
+          "Bonding in carbon",
+          "Functional groups",
+          "Chemical properties of carbon compounds"
+        ]
+      },
+      {
+        "title": "Periodic Classification of Elements",
+        "topics": [
+          "Periodic trends",
+          "Periodic table",
+          "Groups and periods",
+          "Metals, non-metals and metalloids"
+        ]
+      },
+      {
+        "title": "Life Processes",
+        "topics": ["Nutrition", "Respiration", "Transportation", "Excretion"]
+      },
+      {
+        "title": "Control and Coordination",
+        "topics": [
+          "Nervous system",
+          "Neurons",
+          "Synapse",
+          "Reflex action",
+          "Voluntary and involuntary actions"
+        ]
+      },
+      {
+        "title": "How do Organisms Reproduce?",
+        "topics": [
+          "Reproduction in organisms",
+          "Asexual reproduction",
+          "Sexual reproduction",
+          "Pollination and fertilization"
+        ]
+      },
+      {
+        "title": "Heredity and Evolution",
+        "topics": ["Heredity", "Variation", "Evolution", "Speciation"]
+      },
+      {
+        "title": "Light - Reflection and Refraction",
+        "topics": [
+          "Reflection of light",
+          "Refraction of light",
+          "Laws of refraction",
+          "Refraction through a prism"
+        ]
+      },
+      {
+        "title": "Human Eye and Colourful World",
+        "topics": [
+          "Structure of the human eye",
+          "Working of the human eye",
+          "Defects of vision",
+          "Colour blindness"
+        ]
+      },
+      {
+        "title": "Electricity",
+        "topics": [
+          "Electric current",
+          "Electric circuit",
+          "Conductors and insulators",
+          "Resistance"
+        ]
+      },
+      {
+        "title": "Magnetic Effects of Electric Current",
+        "topics": [
+          "Magnetic field",
+          "Magnetic field lines",
+          "Magnetic force",
+          "Electromagnets"
+        ]
+      },
+      {
+        "title": "Sources of Energy",
+        "topics": [
+          "Conventional sources of energy",
+          "Non-conventional sources of energy",
+          "Energy crisis"
+        ]
+      }
+    ]
+  }
+]
