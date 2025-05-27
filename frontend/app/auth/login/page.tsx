@@ -2,15 +2,42 @@
 
 import React from "react";
 import { Form, Input, Button, Link } from "@heroui/react";
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
   const [action, setAction] = React.useState<string | null>(null);
+  const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
-    setAction(`submit ${JSON.stringify(data)}`);
+
+    try {
+      const res = await fetch("http://localhost:5000/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include", // only if using cookies
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        setAction("Login successful. Redirecting...");
+        // Optionally store the token
+        localStorage.setItem("token", result.token);
+        setTimeout(() => {
+          router.push("/");
+        }, 1000);
+      } else {
+        setAction(`Login failed: ${result.message || "Invalid credentials"}`);
+      }
+    } catch (error: any) {
+      setAction(`Login error: ${error.message}`);
+    }
   };
 
   const handleReset = () => {
@@ -19,7 +46,7 @@ export default function LoginForm() {
 
   return (
     <div className="h-screen w-screen flex items-center justify-center">
-      <div className="w-full max-w-md  bg-zinc-950 border border-zinc-800 shadow-xl rounded-2xl p-8">
+      <div className="w-full max-w-md bg-zinc-950 border border-zinc-800 shadow-xl rounded-2xl p-8">
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold text-zinc-200">Welcome Back</h1>
           <p className="text-zinc-500 text-sm mt-1">Login to your account</p>
@@ -63,7 +90,7 @@ export default function LoginForm() {
 
           {action && (
             <div className="text-sm text-center text-zinc-500 mt-2">
-              Action: <code>{action}</code>
+              <code>{action}</code>
             </div>
           )}
         </Form>
