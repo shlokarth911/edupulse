@@ -15,7 +15,7 @@ export async function register(req, res) {
     if (await User.findOne({ email }))
       return res.status(409).json({ error: "Email already in use" });
 
-    const passwordHash = await bcrypt.hash(password, 12);
+    const passwordHash = await bcrypt.hash(password, 10);
     await User.create({ username, email, passwordHash });
 
     res.status(201).json({ message: "Registered. Please verify your email." });
