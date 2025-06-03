@@ -38,6 +38,21 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
+
+    //Gamification Felids :
+
+    points: {
+      type: Number,
+      default: 0,
+    },
+    streak: {
+      type: Number,
+      default: 0,
+    },
+    lastCompletionDate: {
+      type: Date,
+    },
+    badges: [badgeSchema],
   },
   { timestamps: true }
 );
