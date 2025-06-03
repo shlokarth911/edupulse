@@ -1,6 +1,17 @@
 // src/models/User.js
 import mongoose from "mongoose";
 
+const badgeSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  awardedAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
 const userSchema = new mongoose.Schema(
   {
     username: {

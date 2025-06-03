@@ -69,20 +69,6 @@ export async function toggleComplete(req, res) {
   const task = await Task.findOne({ _id: req.params.id, user: req.user._id });
   if (!task) return res.status(404).json({ error: "Task not found" });
 
-  task.completed = !task.completed;
-  task.completedAt = task.completed ? new Date() : undefined;
-  await task.save();
-
-  res.json(task);
-}
-
-import Task from "../models/Task.js";
-import User from "../models/User.js";
-
-export async function toggleComplete(req, res) {
-  const task = await Task.findOne({ _id: req.params.id, user: req.user._id });
-  if (!task) return res.status(404).json({ error: "Task not found" });
-
   // Toggle state
   task.completed = !task.completed;
   task.completedAt = task.completed ? new Date() : undefined;
