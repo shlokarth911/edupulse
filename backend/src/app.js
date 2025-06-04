@@ -1,5 +1,7 @@
 import express from "express";
 import cors from "cors";
+import cookieParser from "cookie-parser";
+
 import authRoutes from "./routes/auth.routes.js";
 import userRoutes from "./routes/users.routes.js";
 import syllabusRoutes from "./routes/syllabus.routes.js";
@@ -8,8 +10,15 @@ import gamificationRoutes from "./routes/gamification.routes.js";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000", // your Next.js origin
+    credentials: true, // <— allow sending cookies
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+  })
+);
 app.use(express.json());
+app.use(cookieParser());
 
 // Public routes
 app.use("/api/auth", authRoutes);

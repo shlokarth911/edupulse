@@ -42,6 +42,13 @@ export async function login(req, res) {
       { expiresIn: JWT_EXPIRES }
     );
 
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true, // requires HTTPS
+      sameSite: "none", // allows cross‑site
+      maxAge: 1000 * 60 * 60 * 24 * 7,
+    });
+
     res.json({
       token,
       user: { id: user._id, username: user.username, email: user.email },
@@ -50,4 +57,13 @@ export async function login(req, res) {
     console.error(err);
     res.status(500).json({ error: "Server error" });
   }
+}
+
+export function logout(req, res) {
+  res.clearCookie("token", {
+    httpOnly: true,
+    sameSite: "lax",
+    secure: process.env.NODE_ENV === "production",
+  });
+  res.json({ message: "Logged out" });
 }

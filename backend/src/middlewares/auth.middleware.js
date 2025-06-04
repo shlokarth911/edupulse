@@ -1,19 +1,35 @@
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 
-const JWT_SECRET = process.env.JWT_SECRET;
+const { JWT_SECRET } = process.env;
 
 export default async function authGuard(req, res, next) {
-  const header = req.headers.authorization;
-  if (!header?.startsWith("Bearer "))
-    return res.status(401).json({ error: "Unauthorized" });
+  // 1) Read the token from the cookie
+  const token = req.cookies?.token;
+  if (!token) {
+    return res.status(401).json({ error: "Unauthorized — no token" });
+  }
 
-  const token = header.split(" ")[1];
+  // 2) Verify and extract the payload
+  let payload;
   try {
-    const { userId } = jwt.verify(token, JWT_SECRET);
-    req.user = await User.findById(userId).select("-passwordHash");
+    payload = jwt.verify(token, JWT_SECRET);
+  } catch (err) {
+    return res
+      .status(401)
+      .json({ error: "Unauthorized — invalid or expired token" });
+  }
+
+  // 3) Fetch the user (without the password hash) and attach to req
+  try {
+    const user = await User.findById(payload.userId).select("-passwordHash");
+    if (!user) {
+      return res.status(401).json({ error: "Unauthorized — user not found" });
+    }
+    req.user = user;
     next();
-  } catch {
-    res.status(401).json({ error: "Invalid or expired token" });
+  } catch (err) {
+    console.error("authGuard error fetching user:", err);
+    res.status(500).json({ error: "Server error" });
   }
 }
