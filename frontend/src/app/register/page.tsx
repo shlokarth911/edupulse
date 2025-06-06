@@ -3,6 +3,7 @@
 import { GalleryVerticalEnd } from "lucide-react";
 
 import { RegisterForm } from "@/components/register-form";
+import Silk from "@/components/SilkBackground";
 
 export default function RegisterPage() {
   return (
@@ -23,11 +24,15 @@ export default function RegisterPage() {
         </div>
       </div>
       <div className="bg-muted relative hidden lg:block">
-        <img
-          src="/placeholder.svg"
-          alt="Image"
-          className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
-        />
+        <div className="z-index-1 absolute top-0 left-0 h-full w-full">
+          <Silk
+            speed={5}
+            scale={1}
+            color="#818181"
+            noiseIntensity={1.5}
+            rotation={0}
+          />
+        </div>
       </div>
     </div>
   );

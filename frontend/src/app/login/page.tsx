@@ -3,6 +3,7 @@
 import { GalleryVerticalEnd } from "lucide-react";
 
 import { LoginForm } from "@/components/login-form";
+import Silk from "@/components/SilkBackground";
 
 export default function LoginPage() {
   return (
@@ -16,18 +17,22 @@ export default function LoginPage() {
             EduPulse
           </a>
         </div>
-        <div className="flex flex-1 items-center justify-center">
-          <div className="w-full max-w-xs">
+        <div className="flex flex-1 items-center justify-center relative">
+          <div className="w-full max-w-xs backdrop-blur-md">
             <LoginForm />
           </div>
         </div>
       </div>
       <div className="bg-muted relative hidden lg:block">
-        <img
-          src="/placeholder.svg"
-          alt="Image"
-          className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
-        />
+        <div className="z-index-1 absolute top-0 left-0 h-full w-full">
+          <Silk
+            speed={5}
+            scale={1}
+            color="#818181"
+            noiseIntensity={1.5}
+            rotation={0}
+          />
+        </div>
       </div>
     </div>
   );

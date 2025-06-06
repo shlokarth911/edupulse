@@ -12,7 +12,7 @@ export function DashboardCards() {
   return (
     <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-4 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
       {/* number of chapters */}
-      <Card className="@container/card">
+      <Card className="@container/card  rounded-3xl ">
         <CardHeader>
           <CardDescription>Chapters Completed</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
@@ -33,7 +33,7 @@ export function DashboardCards() {
       </Card>
 
       {/* number of points */}
-      <Card className="@container/card">
+      <Card className="@container/card rounded-3xl">
         <CardHeader>
           <CardDescription>Total Points</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
@@ -49,7 +49,7 @@ export function DashboardCards() {
       </Card>
 
       {/* study streak*/}
-      <Card className="@container/card">
+      <Card className="@container/card rounded-3xl">
         <CardHeader>
           <CardDescription>Study Score</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
@@ -68,7 +68,7 @@ export function DashboardCards() {
       </Card>
 
       {/* growth rate in studies */}
-      <Card className="@container/card">
+      <Card className="@container/card rounded-3xl">
         <CardHeader>
           <CardDescription>Growth Rate</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">

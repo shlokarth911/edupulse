@@ -41,13 +41,13 @@ const chartConfig = {
 
 export function StudyHoursChart() {
   return (
-    <Card className="h-full">
+    <Card>
       <CardHeader>
         <CardTitle>Study Hours</CardTitle>
         <CardDescription>This Week</CardDescription>
       </CardHeader>
 
-      <CardContent className="h-52 ">
+      <CardContent className="h-52">
         <ChartContainer config={chartConfig} className="h-full w-full">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
