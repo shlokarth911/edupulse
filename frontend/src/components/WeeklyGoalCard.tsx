@@ -3,19 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 const WeeklyGoalCard = () => {
   return (
-    <Card
-      style={{
-        backgroundColor: "rgba(255, 255, 255, 0.05)",
-        backdropFilter: "blur(20px)",
-      }}
-    >
+    <Card className="rounded-3xl">
       <CardHeader>
-        <CardTitle>Weekly Goal</CardTitle>
+        <CardTitle className="text-sm">Weekly Goal</CardTitle>
       </CardHeader>
 
       <CardContent>
-        <p>Finish Chapter 3</p>
-        <p>Finish Chapter 3</p>
+        <p className="text-xl">Finish Integrals</p>
       </CardContent>
     </Card>
   );

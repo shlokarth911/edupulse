@@ -24,37 +24,37 @@ import Link from "next/link";
 const items = [
   {
     title: "Dashboard",
-    url: "/dashboard",
+    url: "/dashboard/home",
     icon: LayoutDashboard,
   },
   {
     title: "Messages",
-    url: "/messages",
+    url: "/dashboard/messages",
     icon: MessagesSquare,
   },
   {
     title: "Tasks",
-    url: "/tasks",
+    url: "/dashboard/tasks",
     icon: ClipboardCheck,
   },
   {
     title: "Mental Health Center",
-    url: "/mental-health",
+    url: "/dashboard/mental-health",
     icon: Brain,
   },
   {
     title: "Syllabus View",
-    url: "/mental-health",
+    url: "/dashboard/syllabus",
     icon: Book,
   },
   {
     title: "Focus Timer",
-    url: "/focus-timer",
+    url: "/dashboard/focus-timer",
     icon: Timer,
   },
   {
     title: "Settings",
-    url: "#",
+    url: "/dashboard/settings",
     icon: Settings,
   },
 ];

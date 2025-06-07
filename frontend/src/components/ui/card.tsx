@@ -6,7 +6,7 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       style={{
-        backgroundColor: "rgba(46, 46, 46, 0.267)",
+        backgroundColor: "rgba(46, 46, 46, 0.5)",
         backdropFilter: "blur(20px)",
       }}
       data-slot="card"

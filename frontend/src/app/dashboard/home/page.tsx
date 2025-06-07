@@ -34,16 +34,10 @@ const page = () => {
   if (!user) return <p>Loading…</p>;
 
   return (
-    <div
-      className=""
-      style={{
-        backgroundImage:
-          "https://i.pinimg.com/736x/89/b7/b5/89b7b5da553719634ea0673f08e8eedc.jpg",
-      }}
-    >
+    <div className="">
       <div className="p-2 w-full  ">
         <p className="text-muted-foreground">Welcome</p>
-        <h3 className="font-bold text-4xl bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+        <h3 className="font-bold text-4xl bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
           {user.username}
         </h3>
       </div>

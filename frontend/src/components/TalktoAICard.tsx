@@ -18,7 +18,7 @@ const TalktoAICard = () => {
       onMouseLeave={() => setParticleSpeed(0)}
       onClick={navigateToAiChat}
     >
-      <div className="z-index-9  flex items-center gap-2 pointer-events-none ">
+      <div className="z-index-9 flex items-center gap-2 pointer-events-none ">
         <h1 className="text-3xl  font-bold mix-blend-difference">Talk to AI</h1>
         <ArrowUpRight className="mix-blend-difference size-9" />
       </div>
